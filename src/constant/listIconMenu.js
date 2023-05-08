@@ -1,0 +1,17 @@
+export const iconMenu = [
+    { name: 'mdi-account', path: '/quan-li-can-bo' },
+    { name: 'mdi-key', path: '/quan-li-nhom-quyen' },
+    { name: 'mdi-account-school', path: '/quan-li-sinh-vien' },
+    { name: 'mdi-menu-open', path: '/quan-li-menu' },
+    { name: 'mdi-newspaper-variant-outline', path: '/quan-li-chuyen-muc-tin-tuc' },
+    { name: 'mdi-newspaper-variant-multiple-outline', path: '/quan-li-bai-viet-tin-tuc' },
+    { name: 'mdi-comment-multiple', path: '/quan-li-gop-y' },
+    { name: 'mdi-map-marker', path: '/quan-li-ban-do' },
+    { name: 'mdi-map', path: '/quan-li-loai-ban-do' },
+    { name: 'mdi-book-cog-outline', path: '/cam-nang-hoa-lac' },
+    { name: ' mdi-book-open-variant', path: '/chuyen-muc-cam-nang-hoa-lac' },
+    { name: 'mdi-map-marker-distance', path: '/quan-li-khu-vuc-ban-do' },
+    { name: 'mdi-bell', path: '/quan-ly-thong-bao' },
+    { name: 'mdi-home-alert', path: '/quan-ly-thong-tin-nha-tro' },
+    { name: 'mdi-home', path: '/quan-ly-danh-sach-nha-tro' },
+]
