@@ -120,7 +120,7 @@ export default {
             const url = response.data.resp.fullPath;
             Editor.insertEmbed(cursorLocation, "image", url);
             resetUploader();
-            console.log("res: ", response);
+           
           })
           .catch(function () {});
       }

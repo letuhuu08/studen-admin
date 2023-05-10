@@ -308,7 +308,7 @@ export default {
       vm.$store
         .dispatch("collectionFilter", filter)
         .then(function (response) {
-          console.log("res: ", response);
+          
           vm.listTypeHandBook = response.content;
         })
         .catch(function () {
@@ -333,7 +333,7 @@ export default {
           .then(function (response) {
             const url = response.data.fullPath;
             vm.formData.AnhDaiDien = url;
-            console.log("res: ", response);
+           
           })
           .catch(function () {
             toastr.error("Upload không thành công");

@@ -355,7 +355,7 @@ export default {
       vm.$store
         .dispatch("collectionFilterInstore", filter)
         .then(function (response) {
-          console.log("res: ", response);
+         
         })
         .catch(function () {
           console.log("Error");
@@ -383,7 +383,7 @@ export default {
           vm.listCadres = response.content.map((item) => ({
             ...item
           }));
-          console.log("res: ", vm.listCadres);
+          
           vm.total = vm.listCadres.length;
           vm.pageCount = response.totalPages;
           vm.loadingData = false;

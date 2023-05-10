@@ -760,7 +760,7 @@ export default {
 
           vm.listImage.push(response.data.fullPathUrl);
 
-          console.log("res: ", response);
+         
         })
         .catch(function () {});
     },

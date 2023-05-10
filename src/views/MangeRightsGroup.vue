@@ -260,7 +260,7 @@ export default {
             const responseData = response.content
             vm.responseListGroup = responseData
             vm.listRightsGroup = responseData.map(item=>({...item, tenChucNang: item.ChucNang.map(item=>item.TenMuc).join(', ')}))
-          console.log("res group: ",   vm.listRightsGroup);
+          
           vm.total = vm.listRightsGroup.length;
           vm.pageCount = response.totalPages;
           vm.page = response.pageable.pageNumber

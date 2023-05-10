@@ -590,7 +590,7 @@ export default {
       vm.$store
         .dispatch("collectionFilter", filter)
         .then(function (response) {
-          console.log("res: ", response);
+         
           vm.listCategoryHandBook = response.content;
           vm.total = vm.listCategoryHandBook.length;
           vm.pageCount = response.totalPages;

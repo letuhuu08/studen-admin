@@ -450,7 +450,7 @@ export default {
           vm.$store
             .dispatch("uploadFile", payload)
             .then(function (response) {
-              console.log("res: ", response);
+             
             })
             .catch(function () {
               toastr.error("Upload không thành công");

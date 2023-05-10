@@ -306,7 +306,6 @@ export default {
           .then(function (response) {
             const url = response.data.resp.fullPath;
             vm.formData.AnhDaiDien = url;
-            console.log("res: ", response);
           })
           .catch(function () {
             toastr.error("Upload không thành công");
@@ -342,7 +341,6 @@ export default {
             const url = response.data.resp.fullPath;
             Editor.insertEmbed(cursorLocation, "image", url);
             resetUploader();
-            console.log("res: ", response);
           })
           .catch(function () {});
       }

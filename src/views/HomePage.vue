@@ -80,7 +80,7 @@ export default {
       vm.$store
         .dispatch("collectionFilterInstore", filter)
         .then(function (response) {
-          console.log("res: ", response);
+         
         })
         .catch(function () {
           console.log("Error");

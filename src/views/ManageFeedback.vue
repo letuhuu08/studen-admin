@@ -952,7 +952,7 @@ dateEndAnswerSend:""
                   .dispatch("uploadFile", payload)
                   .then(function (response) {
                     vm.getListData();
-                    console.log("res: ", response);
+                   
                   })
                   .catch(function () {});
               }
@@ -979,7 +979,7 @@ dateEndAnswerSend:""
               vm.dialogAnswerFeedBacks = false;
               vm.emitDataFile = null;
               vm.getListData();
-              console.log("res: ", response);
+             
             })
             .catch(function () {});
         } else {
@@ -1066,7 +1066,7 @@ dateEndAnswerSend:""
                   .dispatch("uploadFile", payload)
                   .then(function (response) {
                     vm.getListData();
-                    console.log("res: ", response);
+                   
                   })
                   .catch(function () {});
               } else if (
@@ -1088,7 +1088,7 @@ dateEndAnswerSend:""
                   .dispatch("uploadFile", payload)
                   .then(function (response) {
                     vm.getListData();
-                    console.log("res: ", response);
+                   
                   })
                   .catch(function () {});
               } else {

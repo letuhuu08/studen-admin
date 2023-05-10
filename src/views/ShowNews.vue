@@ -40,7 +40,7 @@ export default {
       vm.$store
         .dispatch("getDetailsItemDataPublic", filter)
         .then(function (response) {
-          console.log("res: ", response);
+         
           vm.data = { ...response.resp };
         })
         .catch(function () {});
