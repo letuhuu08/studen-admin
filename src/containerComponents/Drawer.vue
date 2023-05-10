@@ -110,7 +110,7 @@ export default {
     created () {
       let vm = this
       let currentQuery = vm.$router.history.current
-     
+      console.log('currentQuery', currentQuery)
       
       vm.menuName = currentQuery.name
 
@@ -152,6 +152,7 @@ export default {
       vm.getMenus()
       vm.$store.commit('SET_DRAWER', !vm.isMobile)
       vm.userInfo = vm.$cookies.get('UserInfo', '')
+      console.log("infor: ", vm.userInfo, vm.MaMenu, titlePage)
     },
     mounted () {
       let vm = this
@@ -204,7 +205,7 @@ export default {
           dataRender = data
         }
         vm.$store.commit("SET_MENU_NGUOI_DUNG", dataRender)
-       
+        console.log('dataRender',vm.userInfo.viTriChucDanh, dataRender)
         return dataRender
       },
     },
@@ -293,8 +294,9 @@ export default {
       vm.$store
         .dispatch("collectionFilter", filter)
         .then(function (response) {
-         
-         vm.listMenu = response.content 
+         console.log("respon: ", response)
+         vm.listMenu = response.content
+          console.log("add: ",  vm.listMenu)    
           // const menuWeb = vm.listMenu.filter(el=> el.LoaiMenu !== "1").sort((a, b)=>a.SoThuTu-b.SoThuTu)
           // vm.$store.commit("SET_MENU_NGUOI_DUNG", menuWeb)
         })
