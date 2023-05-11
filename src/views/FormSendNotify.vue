@@ -156,7 +156,7 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+  
   },
   created() {
     const vm = this;

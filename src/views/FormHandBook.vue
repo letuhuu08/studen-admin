@@ -268,7 +268,7 @@ export default {
   created() {
     const vm = this;
 
-    console.log("cretate", this.dataEdit);
+  
 
     vm.getTypeHandBook({ danhMuc_maDanhMuc: "CHUYENMUCCAMNANG" });
 
@@ -276,7 +276,7 @@ export default {
     if (vm.dataEdit?.NoiDung) {
       vm.arrDataContent = vm.dataEdit?.NoiDung;
       vm.arrUrl = vm.dataEdit?.NoiDung.map((item) => item.Attachment);
-      console.log("create1: ", vm.arrUrl);
+     
     }
   },
   computed: {
@@ -318,7 +318,7 @@ export default {
     handleChangeFile(value) {
       const vm = this;
 
-      console.log("value: ", value);
+     
 
       if (value) {
         let formData = new FormData();
@@ -358,7 +358,7 @@ export default {
           .then(function (response) {
             const url = response.data.fullPath;
             vm.arrUrl = [...vm.arrUrl, url];
-            console.log("res: ", response, vm.arrUrl);
+           
           })
           .catch(function () {
             toastr.error("Upload không thành công");
@@ -379,7 +379,7 @@ export default {
           return param.id !== el.id;
         });
         vm.arrUrl = vm.arrUrl.filter((_, idx) => idx !== index);
-        console.log("remove", index, param, vm.arrUrl);
+       
       }
     },
     addField(type) {
@@ -402,7 +402,7 @@ export default {
       );
       vm.formData.TenChuyenMuc = data[0].TenMuc;
       vm.formData.MaChuyenMuc = data[0].PrimKey;
-      console.log("value: ", vm.listTypeHandBook, value);
+      
     },
   },
 };

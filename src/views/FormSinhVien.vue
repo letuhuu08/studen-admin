@@ -505,7 +505,7 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+  
   },
   created() {
     const vm = this;
@@ -533,13 +533,7 @@ export default {
       if (vm.dataEdit?.ThuMucAnh.length) vm.showAddImg = true;
     }
 
-    console.log(
-      "cretate",
-      this.dataEdit,
-      vm.unitId,
-      vm.checkActionUpload,
-      vm.dataEdit.PrimKey
-    );
+   
   },
   computed: {
     ...mapState(["listAgencies", "listProvince", "listGender"]),
@@ -554,7 +548,7 @@ export default {
     optionAgencies() {
       const vm = this;
       let data = vm.listAgencies;
-      console.log("Data: ", data, vm.unitId);
+     
 
       if (vm.checkActionAddAndUpdate === textAuthor.ALONE && vm.unitId) {
         data.filter((item) => item.maHanhChinh === vm.unitId);
@@ -588,7 +582,7 @@ export default {
   methods: {
     handleAddFolder() {
       const vm = this;
-      console.log("props: ", vm.dataEdit);
+     
 
       const dataPayload = {
         ...vm.dataEdit,
@@ -605,7 +599,7 @@ export default {
         .then(function (response) {
           toastr.success("Thêm thư mục thành công");
           vm.showAddImg = true;
-          console.log("reps forder", response);
+        
           vm.idFolder = response.data.resp.ThuMucAnh[0].MaThuMuc;
           vm.formData.ThuMucAnh = response.data.resp.ThuMucAnh;
           vm.showAddImg = true;
@@ -683,7 +677,7 @@ export default {
     },
     hanldeChangeDistrict(item) {
       const vm = this;
-      console.log("dis", vm.optionDistrict, item);
+   
       vm.getWard(item.MaMuc);
     },
     handleCloseDialog() {
@@ -696,7 +690,7 @@ export default {
       vm.showDialogFolder = true;
       vm.$nextTick(() => {
         const getWrapImgAddFile = vm.$el.querySelector(".wrap-img-file");
-        console.log("run here", getWrapImgAddFile);
+        
         if (vm.listImage.length) {
           vm.listImage.forEach((item) => {
             //       const span = document.createElement("span");
@@ -729,14 +723,14 @@ export default {
     },
 
     handleClickRemoveImg() {
-      console.log("click span");
+    
     },
 
     handleChangeFile(e) {
       const vm = this;
       const file = e?.target.files[0];
       const idFileFolder = vm.idFolder || vm.dataEdit?.ThuMucAnh[0].MaThuMuc;
-      console.log("file", file, idFileFolder);
+      
 
       let formData = new FormData();
       formData.append("files", file);

@@ -102,12 +102,12 @@ export default {
   },
 
   mounted() {
-    console.log("moun", this.$refs.formCategoryHandBookRef, this.dataEdit);
+   
   },
   created() {
     const vm = this;
     vm.getGroup();
-    console.log("cretate");
+    
   },
   methods: {
     getGroup() {

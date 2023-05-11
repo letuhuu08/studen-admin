@@ -160,7 +160,7 @@
     }),
     created () {
       let vm = this
-      console.log("create")
+      
       if (Vue.$cookies.get('Token')) {
         vm.signed = true
       } else {
@@ -202,8 +202,7 @@
                 if (dataUser.MaDonVi === "FDS" || dataUser.MaDonVi === "VNU") admin = true
               }
 
-              console.log('roleUser', roleUser)
-              console.log("pq:",dataUser, roleUser)
+              
               if (roleUser && roleUser.length) {
                 vm.$cookies.set('Token', result.access_token, result.expires_in)
                 vm.$cookies.set('RefreshToken', result.refresh_token, result.refresh_expires_in)

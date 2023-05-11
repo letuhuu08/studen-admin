@@ -82,12 +82,12 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+   
   },
   created() {
     const vm = this;
 
-    console.log("cretate", this.dataEdit);
+    
   },
   methods: {
     validateForm() {

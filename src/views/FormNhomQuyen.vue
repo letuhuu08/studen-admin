@@ -85,14 +85,14 @@ export default {
 
   mounted() {
     const vm = this;
-    console.log("moun", vm);
+    
 
     const getSelected = vm.$el.querySelector(
       ".custom-set-height-tag-select > .v-input__control > div"
     );
 
     if (getSelected.offsetHeight < 200) {
-      console.log("run here");
+     
       Object.assign(getSelected.style, {
         maxHeight: "none",
         overflowY: "auto",
@@ -103,7 +103,7 @@ export default {
   created() {
     const vm = this;
     vm.getUeses();
-    console.log("cretate", this.dataEdit);
+    
   },
   computed: {},
   methods: {

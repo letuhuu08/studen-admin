@@ -230,13 +230,13 @@ export default {
   },
 
   mounted() {
-    console.log("select: ", this.selected);
+    
   },
 
   methods: {
     getListAreaFilter(type) {
       const vm = this;
-      console.log("tim kiếm");
+      
       vm.getListArea({ keyword: !type ? vm.textSearch : "" });
     },
     getListArea(dataParam) {
@@ -260,7 +260,7 @@ export default {
         .then(function (response) {
           vm.listArea = response.content;
 
-          console.log("res: ", vm.listArea);
+          
           vm.total = vm.listArea.length;
           vm.pageCount = response.totalPages;
           vm.page = response.pageable.pageNumber
@@ -298,7 +298,7 @@ export default {
               }, []);
               vm.total = vm.listArea.length;
 
-              console.log("res dele: ", response);
+              
             })
             .catch(function () {
               vm.loadingData = false;
@@ -310,7 +310,7 @@ export default {
     editArea(item) {
       const vm = this;
       vm.edittingForm = true;
-      console.log("item edit: ", item);
+      
       vm.dataEdit = item;
       vm.dialogForm = true;
     },
@@ -361,7 +361,7 @@ export default {
               }
               vm.dialogForm = false;
               vm.total = vm.listArea.length;
-              console.log("res post: ", response);
+              
             })
             .catch(function (err) {
               vm.loadingData = false;
@@ -385,13 +385,7 @@ export default {
                 else return [...res, cur];
               }, []);
 
-              console.log(
-                "res edit: ",
-                response,
-                dataPayload,
-                vm.dataEdit.PrimKey,
-                vm.listArea
-              );
+              
               vm.dataEdit = {};
             })
             .catch(function () {
@@ -400,7 +394,7 @@ export default {
             });
         }
 
-        console.log("submit", formData);
+        
       }
     },
   },

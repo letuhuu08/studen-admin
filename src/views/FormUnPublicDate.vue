@@ -86,10 +86,10 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+  
   },
   created() {
-    console.log("props: ", this.dataItem);
+   
   },
   methods: {
     validateForm() {

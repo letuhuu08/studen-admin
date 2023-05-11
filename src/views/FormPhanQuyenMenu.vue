@@ -65,7 +65,7 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+  
     
   },
   created() {
@@ -75,7 +75,7 @@ export default {
           value: item.MaDinhDanh,
         }));
      vm.getGroup();
-     console.log("props: ", vm.dataSelectEditMenu)
+     
   },
   methods: {
     validateForm() {

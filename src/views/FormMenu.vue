@@ -206,12 +206,12 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+  
   },
   created() {
     const vm = this;
     vm.getGroup();
-    console.log("cretate", this.dataEdit, this.listMenu);
+    
   },
   methods: {
     getGroup() {

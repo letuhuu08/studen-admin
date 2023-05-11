@@ -110,7 +110,7 @@ export default {
     created () {
       let vm = this
       let currentQuery = vm.$router.history.current
-      console.log('currentQuery', currentQuery)
+      
       
       vm.menuName = currentQuery.name
 
@@ -144,7 +144,7 @@ export default {
 
       for (const property in titlePage) {
         if(vm.MaMenu === property) {
-          console.log("property: ", property)
+        
         vm.$store.dispatch("setTitlePage", titlePage[property])
         break;
         }
@@ -152,7 +152,7 @@ export default {
       vm.getMenus()
       vm.$store.commit('SET_DRAWER', !vm.isMobile)
       vm.userInfo = vm.$cookies.get('UserInfo', '')
-      console.log("infor: ", vm.userInfo, vm.MaMenu, titlePage)
+    
     },
     mounted () {
       let vm = this
@@ -182,7 +182,7 @@ export default {
         }
         vm.listMenu = sortCounter(vm.listMenu)
         if(vm.userInfo.viTriChucDanh !== "Quản trị hệ thống") {
-          console.log("menu: ", vm.listMenu,  vm.userInfo)
+        
           const data = vm.listMenu.reduce((res, cur) => {
             if( vm.userInfo.menu.includes(cur.PrimKey)) return [...res, cur]
             else return res
@@ -205,7 +205,7 @@ export default {
           dataRender = data
         }
         vm.$store.commit("SET_MENU_NGUOI_DUNG", dataRender)
-        console.log('dataRender',vm.userInfo.viTriChucDanh, dataRender)
+      
         return dataRender
       },
     },
@@ -294,9 +294,9 @@ export default {
       vm.$store
         .dispatch("collectionFilter", filter)
         .then(function (response) {
-         console.log("respon: ", response)
+        
          vm.listMenu = response.content
-          console.log("add: ",  vm.listMenu)    
+             
           // const menuWeb = vm.listMenu.filter(el=> el.LoaiMenu !== "1").sort((a, b)=>a.SoThuTu-b.SoThuTu)
           // vm.$store.commit("SET_MENU_NGUOI_DUNG", menuWeb)
         })

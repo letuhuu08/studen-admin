@@ -654,7 +654,7 @@ export default {
             vm.loadingData = false;
           });
 
-        console.log("submit", formData, payloadData);
+        
       }
     },
     handleEmitDataGroup(data) {
@@ -786,7 +786,7 @@ export default {
             });
         }
 
-        console.log("submit", formData, dataPayload, vm.listCadres);
+        
       }
     },
     getList(state, collectionName, dataParam) {

@@ -443,7 +443,7 @@
         }
         axios(config).then(function (response) {
           let serializable = response.data
-          console.log('thongtinnoitru', serializable.data[0])
+         
           if (serializable && serializable.data && serializable.data[0]) {
             vm.thongTinNoiTru = serializable.data[0]
             vm.dialogThongTinNoiTru = true
@@ -655,7 +655,7 @@
           "tenTiengAnh": "",
 		      "tenVietTat": ""
         }
-        console.log('thongTinCongDanOutput', vm.thongTinToChuc)
+        
       },
       formatInputData () {
         let vm = this

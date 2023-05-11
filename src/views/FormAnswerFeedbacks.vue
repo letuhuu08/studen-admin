@@ -122,22 +122,22 @@ export default {
 
   mounted() {
     const vm = this;
-    console.log("moun", vm.$nextTick());
+   
     const getBlockText = vm.$el.querySelector(".custom-block-text");
     vm.$nextTick(() => {
       if (getBlockText.offsetHeight < 165) {
-        console.log("run here");
+        
         Object.assign(getBlockText.style, {
           overflowY: "auto",
         });
       }
     });
 
-    console.log("moun2");
+   
   },
   created() {
     const vm = this;
-    console.log("cretate", this.dataProps, this.textFeedback);
+    
     vm.textFeedback = vm.dataProps.map((item) => item.NoiDung).join(", ");
   },
   methods: {
@@ -177,7 +177,7 @@ export default {
     },
     handleChangeFile(value) {
       const vm = this;
-      console.log("click file");
+   
       vm.$emit("emitDataFile", value);
     },
     handleViewFile(type) {

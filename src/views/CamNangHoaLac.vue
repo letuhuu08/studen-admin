@@ -526,10 +526,10 @@ export default {
                 vm.$route.params.id === item.PrimKey
               );
             });
-            console.log("respon", camnang, vm.$route.params.id);
+            
             if (camnang && camnang.length) {
               let data = camnang[0];
-              console.log("data: ", data);
+             
               let mucLuc = JSON.parse(data.Content);
               vm.nameHandBook = mucLuc.TenCamNang;
               vm.file = mucLuc.AnhDaiDien;
@@ -764,7 +764,7 @@ export default {
     handleChangeFile(value) {
       const vm = this;
 
-      console.log("value: ", value);
+    
 
       if (value) {
         let formData = new FormData();
@@ -825,16 +825,11 @@ export default {
           toastr.error("Vui lòng kiểm tra lại dữ liệu nhập vào các trường");
         });
 
-      console.log(
-        "update cán bộ",
-        JSON.parse(vm.thongTinCamNang.Content),
-        dataPayload,
-        vm.elements
-      );
+     
     },
     getTypeHandBook(dataParam) {
       const vm = this;
-      console.log("get type handbook");
+    
 
       vm.loadingData = true;
       const dataPayload = {

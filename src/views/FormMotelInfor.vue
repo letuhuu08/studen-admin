@@ -100,11 +100,11 @@ export default {
           return status;
         },
         checkDoubleDataName: (value) => {
-          console.log("checking!!!", value, this.listMotelInforData);
+       
           return true;
         },
         checkDoubleDataAddress: (value) => {
-          console.log("checking!!!", value, this.listMotelInforData);
+       
           return true;
         },
         number: (value) => {
@@ -120,7 +120,7 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+  
   },
   created() {
     const vm = this;
@@ -168,7 +168,7 @@ export default {
           }
         })
         .catch(function () {
-          console.log("Error");
+         
         });
     },
     handleChangeProvince(item) {
@@ -178,7 +178,7 @@ export default {
       const provinceCode = vm.listProvince.filter(
         (province) => province.PrimKey === item
       )[0]?.maMuc;
-      console.log("item: ", item, provinceCode);
+    
       if (provinceCode)
         vm.getListDataAddress("quanhuyen", {
           tinhTrang: "1",

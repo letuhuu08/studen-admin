@@ -132,7 +132,7 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+   
   },
   created() {
     const vm = this;
@@ -141,7 +141,7 @@ export default {
     vm.hideBtnDeleteFile = vm.dataEdit.TraLoi.Attachment?.FileName
       ? true
       : false;
-    console.log("cretate", this.dataEdit);
+   
   },
   methods: {
     getList(collectionName) {

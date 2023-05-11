@@ -147,7 +147,7 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+    
   },
   created() {
     const vm = this;
@@ -155,7 +155,7 @@ export default {
     vm.getListArea();
     vm.getListTypeMap();
 
-    console.log("cretate", this.dataEdit, vm.unitId, vm.checkActionUpload);
+   
   },
   computed: {
    
@@ -190,7 +190,7 @@ export default {
             value: item.MaDinhDanh,
           }));
 
-          console.log("res: ", vm.listArea);
+       
         })
         .catch(function () {
           vm.loadingData = false;
@@ -222,7 +222,7 @@ export default {
             value: item.MaDinhDanh,
           }));
 
-          console.log("res: ", response.content);
+        
         })
         .catch(function () {
           vm.loadingData = false;

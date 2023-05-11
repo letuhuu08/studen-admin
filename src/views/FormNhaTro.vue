@@ -300,12 +300,12 @@ export default {
 
   mounted() {
     const vm = this;
-    console.log("moun");
+  
     if (vm.dataEdit.PrimKey) vm.handleBindFiles();
   },
   created() {
     const vm = this;
-    console.log("props: ", vm.dataEdit, vm.listMotelInforData);
+
     vm.getListDataAddress("tinhthanh", { tinhTrang: "1" });
 
     if (vm.dataEdit.PrimKey) {
@@ -355,7 +355,7 @@ export default {
           }
         })
         .catch(function () {
-          console.log("Error");
+       
         });
     },
     handleChangeProvince(item) {
@@ -365,7 +365,7 @@ export default {
       const provinceCode = vm.listProvince.filter(
         (province) => province.PrimKey === item
       )[0]?.maMuc;
-      console.log("item: ", item, provinceCode);
+    
       if (provinceCode)
         vm.getListDataAddress("quanhuyen", {
           tinhTrang: "1",
@@ -409,7 +409,7 @@ export default {
       const vm = this;
 
       const files = e?.target.files;
-      console.log("files: ", files?.length, files);
+      
 
       const totalFiles = vm.files.length + files?.length;
 
@@ -482,7 +482,7 @@ export default {
 
       if (!cloneNodeListImgItemtoArray.length) vm.files = null;
 
-      console.log("remove", cloneNodeListImgItemtoArray, file);
+   
     },
     handleClickMultipeFile() {
       const vm = this;

@@ -100,7 +100,7 @@ export default {
   },
 
   created() {
-    console.log("props: ", this.dataStudent);
+ 
   },
 
   mounted() {},

@@ -123,12 +123,12 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+  
   },
   created() {
     const vm = this;
     vm.getGroup();
-    console.log("cretate", this.dataEdit);
+    
   },
   computed: {
     ...mapState(["listAgencies", "listProvince", "listGender", "listWork"]),
@@ -279,7 +279,7 @@ export default {
     },
     hanldeChangeDistrict(item) {
       const vm = this;
-      console.log("dis", vm.optionDistrict);
+     
       const districtCode = vm.optionDistrict.filter(
         (district) => district.value === item
       )[0].districtCode;

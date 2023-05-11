@@ -70,7 +70,7 @@ export default {
   },
   created() {
     const vm = this;
-    console.log("props: ", vm.dataTypeHandBook)
+   
     vm.listCategoryNews = vm.dataTypeHandBook.map((item) => ({
       text: item.TenMuc,
       value: item.MaDinhDanh,

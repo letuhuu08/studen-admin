@@ -66,12 +66,12 @@ export default {
 
   mounted() {
     const vm = this;
-    console.log("moun", vm);
+    
   },
   created() {
     const vm = this;
     vm.getUeses();
-    console.log("cretate", this.dataEdit);
+    
   },
   computed: {},
   methods: {

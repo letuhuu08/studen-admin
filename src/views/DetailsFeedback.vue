@@ -145,12 +145,12 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+    
   },
   created() {
     const vm = this;
     vm.getListData();
-    console.log("cretate", this.dataEdit);
+    
   },
   methods: {
     getListData() {
@@ -172,7 +172,7 @@ export default {
       vm.$store
         .dispatch("collectionFilter", filter)
         .then(function (response) {
-          console.log(response);
+        
           vm.listStudent = response.content;
         })
         .catch(function () {});

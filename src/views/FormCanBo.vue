@@ -265,12 +265,12 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+   
   },
   created() {
     const vm = this;
     vm.getGroup();
-    console.log("cretate", this.dataEdit);
+    
 
     if (vm.dataEdit.PrimKey){
       if (vm.dataEdit?.diaChiThuongTru?.TinhThanh.MaMuc)
@@ -439,7 +439,7 @@ export default {
     },
     hanldeChangeDistrict(item) {
       const vm = this;
-      console.log("dis", vm.optionDistrict, item);
+     
       const districtCode = vm.optionDistrict.filter(
         (district) => district.districtCode === item.MaMuc
       )[0].districtCode;

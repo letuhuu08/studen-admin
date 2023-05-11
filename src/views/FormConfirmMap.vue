@@ -68,11 +68,11 @@ export default {
   },
 
   mounted() {
-    console.log("moun");
+   
   },
   created() {
     const vm = this
-     console.log("props: ", this.dataItem)
+     
      vm.getListTypeMap()
   },
   methods: {
@@ -102,7 +102,7 @@ export default {
            vm.$emit("emitDataListTypeMap", response.content);
           vm.listTypeMap = response.content.map(el=>({text: el.TenLoaiBanDo, value: el.MaDinhDanh}));
 
-          console.log("res: ", vm.listTypeMap);
+        
         })
         .catch(function () {
         });
