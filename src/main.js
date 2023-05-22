@@ -125,7 +125,7 @@ Vue.mixin({
 
 Vue.use(VueGoogleMaps, {
     load: {
-        key: "AIzaSyDaOulQACiJzBfqumbsqg_-vKha8fCnL-s",
+        key: "AIzaSyCHsLOCjCCmmkEiEiimLPuS9dWYPqsBL40",
         libraries: "places"
     }
 });
